@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cloud-analytics-dashboard
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn dashboard:server
+    plan: free
